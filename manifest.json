@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Viktor Kvapil",
+  "name": "Viktor Kvapil",
   "icons": [
     {
       "src": "favicon.ico",
@@ -17,6 +17,11 @@
       "type": "image/png",
       "sizes": "512x512"
     }
+  ],
+  "permissions": [
+    "identity",
+    "https://spreyo.github.io/",
+    "https://kvapil.viktor.ga/"
   ],
   "start_url": ".",
   "display": "standalone",

@@ -32,7 +32,7 @@ const ambientLight = new THREE.AmbientLight(0xffffff, 3, 100, 45);
 ambientLight.position.y = 30;
 ambientLight.position.z = 10;
 scene.add(ambientLight);
-const backgroundTexture = new THREE.TextureLoader().load("/portfolio/images/background.png");
+const backgroundTexture = new THREE.TextureLoader().load("/images/background.png");
 
 scene.background = backgroundTexture;
 
@@ -41,7 +41,7 @@ scene.background = backgroundTexture;
 var monitor;
 const fbxLoader = new FBXLoader();
 fbxLoader.load(
-    '/portfolio/models/Ultrawide Monitor.fbx',
+    '/models/Ultrawide Monitor.fbx',
     (object) => {
         object.scale.set(0.1, 0.1, 0.1);
 
@@ -57,7 +57,7 @@ fbxLoader.load(
 const objLoader = new OBJLoader()
 var nameText;
 fbxLoader.load(
-    '/portfolio/models/viktorkvapil.fbx',
+    '/models/viktorkvapil.fbx',
     (object) => {
         object.scale.set(0.009, 0.009, 0.009)
         object.traverse((child) => {

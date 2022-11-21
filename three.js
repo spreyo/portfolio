@@ -78,12 +78,27 @@ function scalePercent(start, end) {
     return (scrollPercent - start) / (end - start)
 }
 
+
+// SCROLL INDICATOR
+const scrollDown = document.getElementById("scroll-down");
+function arrowOpacity(opacityModifier = 400) {
+    scrollDown.style.opacity = ((lerp(0, 100)), scalePercent(0, 50));
+    scrollDown.style.opacity = `${100 - (scrollDown.style.opacity * opacityModifier)}%`;
+    scrollDown.style.opacity = scrollPercent >= 50 ? 0 : scrollDown.style.opacity;
+    scrollDown.hidden = scrollDown.style.opacity == 0 ? true : false;
+
+
+}
+
+
 const animationScripts = [];
 
 animationScripts.push({
     start: 0, end: 50,
     func: () => {
         camera.position.z = lerp(0, 40, scalePercent(0, 50));
+        arrowOpacity(400)
+
         nameText.rotation.x = lerp(0, 1.7, scalePercent(0, 50));
     }
 })
@@ -143,7 +158,6 @@ function scrollEffect() {
     }
     else {
         camera.position.y = t * 0.01;
-        console.log(camera.position.y);
     }
 }
 
@@ -162,7 +176,6 @@ function onWindowResize() {
 
 function animate() {
     requestAnimationFrame(animate);
-    console.log(window.scrollY);
     playScrollAnimations();
     renderer.render(scene, camera);
 }

@@ -26,6 +26,28 @@ stars gray - 8C8A93
   src: url("/src/fonts/metropolis.regular.otf");
 }
 
+@keyframes bounce {
+
+  0%,
+  25%,
+  50%,
+  75%,
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  40% {
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+
+  60% {
+    -webkit-transform: translateY(-12px);
+    transform: translateY(-12px);
+  }
+}
+
 
 canvas {
   position: fixed;
@@ -75,7 +97,28 @@ html {
   font-family: "raleway-thin";
 }
 
+#scroll-down {
+  width: 99%;
+  max-width: 100%;
+  padding: 0px;
+  height: 100px;
+  position: fixed;
+  user-select: none;
+}
 
+#scroll-down-image {
+  margin-top: 700px;
+  text-align: center;
+  -webkit-animation: bounce 2s;
+  animation: bounce 2s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  user-select: none;
+  width: 50px;
+  height: 50px;
+
+
+}
 
 .filler {
   height: 150vw;

@@ -73,7 +73,7 @@ function ProjectCard({ image, text, link, linkText }) {
   return (
     <div className="card-background">
       <>
-        {image == "none" ? <></> : <img className='card-img' src={image} onClick={() => { open(link) }}></img>}
+        {image == "none" ? <></> : <img className='card-img' src={image} onClick={() => { link == undefined ? <></> : open(link) }}></img>}
       </>
 
       <>{text}</>
@@ -174,7 +174,11 @@ function App() {
   return (
 
     <div className="App">
-      <div className='filler'></div>
+      <div id="scroll-down">
+        <img id="scroll-down-image" src="/images/scroll.png"></img>
+      </div>
+      <div className='filler'>
+      </div>
       <About />
       <Projects />
       <Footer />

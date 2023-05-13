@@ -1,0 +1,302 @@
+/*
+dark purple - 27034a
+light blue - 55c5da
+gray -  1f2122
+neon green - 66e64a
+stars gray - 8C8A93
+*/
+
+@font-face {
+  font-family: "raleway-thin";
+  src: url("/src/fonts/Raleway-Thin.ttf");
+}
+
+@font-face {
+  font-family: "raleway-bold";
+  src: url("/src/fonts/Raleway-Bold.ttf");
+}
+
+@font-face {
+  font-family: "raleway-regular";
+  src: url("/src/fonts/Raleway-Regular.ttf");
+}
+
+@font-face {
+  font-family: "metropolis-regular";
+  src: url("/src/fonts/metropolis.regular.otf");
+}
+
+@keyframes bounce {
+
+  0%,
+  25%,
+  50%,
+  75%,
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  40% {
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+
+  60% {
+    -webkit-transform: translateY(-12px);
+    transform: translateY(-12px);
+  }
+}
+
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+#root {
+  position: absolute;
+}
+
+#nav-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #1f2122;
+  height: 80px;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+#nav-links {
+  display: flex;
+  margin-right: 100px;
+}
+
+#nav-links a {
+  display: inline-block;
+  cursor: pointer;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #66e64a;
+  font-family: "metropolis-regular";
+}
+
+#logo {
+  justify-content: center;
+  margin-left: 100px;
+  color: #66e64a;
+  font-family: "raleway-thin";
+}
+
+#scroll-down {
+  width: 99%;
+  max-width: 100%;
+  padding: 0px;
+  height: 100px;
+  position: fixed;
+  user-select: none;
+}
+
+#scroll-down-image {
+  margin-top: 700px;
+  text-align: center;
+  -webkit-animation: bounce 2s;
+  animation: bounce 2s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  user-select: none;
+  width: 50px;
+  height: 50px;
+
+
+}
+
+.filler {
+  height: 150vw;
+  width: 50vw;
+}
+
+/* ABOUT ME */
+
+#about-div {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+}
+
+#about-background {
+  /* text-align: center; */
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 1fr;
+  grid-template-columns: 75px 425px;
+  grid-template-rows: 510px;
+  gap: 1px 0px;
+  grid-template-areas:
+    "header text";
+
+  background-color: #1f2122;
+  width: 500px;
+  height: 510px;
+}
+
+#about-header {
+  width: 510px;
+  font-size: 32px;
+  font-family: "raleway-bold";
+  color: #66e64a;
+  transform: rotate(-90deg);
+  grid-area: header;
+}
+
+#about-header h1 {
+  text-align: center;
+}
+
+#about-text {
+  grid-area: text;
+  font-family: "raleway-regular";
+  color: #66e64a;
+  opacity: 50%;
+  font-size: 16px;
+  margin: auto;
+}
+
+/*  PROJECTS */
+
+#projects-title {
+  text-align: center;
+  color: #66e64a;
+  font-family: "metropolis-regular";
+  margin-top: 200px;
+  font-size: 64px;
+}
+
+#projects-div {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  margin-top: 50px;
+
+}
+
+#projects-background {
+  width: 1600px;
+  height: 800px;
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 77px 77px;
+
+
+}
+
+.card-background {
+  background-color: #1f2122;
+  opacity: 100%;
+  opacity: 100%;
+  width: 276px;
+  height: 408px;
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 1fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: 168px 180px 60px;
+  gap: 1px 0px;
+  grid-template-areas:
+    "image"
+    "description"
+    "link";
+
+}
+
+.card-img {
+  grid-area: image;
+  cursor: pointer;
+  width: 225px;
+  height: 124px;
+  opacity: 50%;
+  border-radius: 15px;
+  margin: auto;
+
+}
+
+.card-text {
+  grid-area: description;
+  width: 225px;
+  height: 168px;
+  text-align: start;
+  font-family: "raleway-regular";
+  color: #66e64a;
+  opacity: 50%;
+  margin: auto;
+  white-space: pre-wrap;
+
+}
+
+.card-text-centered {
+  text-align: center;
+}
+
+.card-link {
+  grid-area: link;
+  text-align: center;
+  font-family: "raleway-bold";
+  color: #66e64a;
+  opacity: 100%;
+  margin: auto;
+}
+
+#footer {
+  height: 75px;
+  margin-top: 150px;
+  background-color: #66e64a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-link {
+  font-size: 16px;
+  margin-left: 10px;
+  cursor: pointer;
+  font-family: "metropolis-regular";
+}
+
+.icon {
+  margin-left: 30px;
+  cursor: pointer;
+  fill: #1f2122;
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #66e64a #1f2122;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #1f2122;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #66e64a;
+  border-radius: 10px;
+  border: 3px none #ffffff;
+}

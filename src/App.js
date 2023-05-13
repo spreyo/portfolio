@@ -132,9 +132,13 @@ function Projects() {
             own API server for it.</p></>}
             linkText="abandoned" />
 
+          <ProjectCard image="/images/shroomcraft.png" text={<><p className='card-text card-text-centered'>
+            A website for my minecraft server named ShroomCraft.</p></>}
+            link="https://www.shroomcraft.gq"
+            linkText={"link"} />
 
           <ProjectCard image="/images/viktorkvapil.png" text={<><p className='card-text card-text-centered'>
-            This site</p></>}
+            The source code for this website</p></>}
             link="https://github.com/spreyo/portfolio/tree/main"
             linkText={"github"} />
 
